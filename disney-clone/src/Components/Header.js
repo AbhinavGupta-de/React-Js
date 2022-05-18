@@ -1,3 +1,4 @@
+import { navigate } from '@reach/router';
 import { signInWithPopup } from 'firebase/auth';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -9,6 +10,11 @@ function Header() {
 	let state = store.getState();
 	let userName = state[0].name;
 	let userPhoto = state[0].photo;
+	var loginButton = userName.length > 0;
+
+	if (loginButton) {
+		navigate('/home');
+	}
 
 	const handleAuth = () => {
 		signInWithPopup(auth, provider)
@@ -37,9 +43,6 @@ function Header() {
 		userName = state[0].name;
 		userPhoto = state[0].photo;
 	};
-
-	var loginButton = userName.length > 0;
-	console.log(loginButton);
 
 	return (
 		<div className="header">
