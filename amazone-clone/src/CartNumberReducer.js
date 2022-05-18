@@ -2,7 +2,7 @@ import { configureStore } from 'redux';
 import { useContext } from 'react';
 import StateContext from './StateContext';
 
-const reducer = (state = 0, action) => {
+const reducer = (state, action) => {
 	if (action.type === 'ADD_TO_CART') {
 		return state + action.id;
 	} else {

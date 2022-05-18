@@ -1,0 +1,86 @@
+.login {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	height: 100vh;
+}
+
+.login__Content {
+	width: 100%;
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+	padding: 80px 40px;
+	height: 100%;
+}
+
+.login__cta {
+	margin-bottom: 2vw;
+	max-width: 650px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.login__ctaLogoOne {
+	margin-bottom: 12px;
+	max-width: 600px;
+	min-height: 1px;
+	display: block;
+	width: 100%;
+	margin-bottom: 12px;
+}
+
+.login__ctaLink {
+	font-weight: bold;
+	font-size: 30px;
+	background-color: #0063e5;
+	margin-bottom: 12px;
+	color: white;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	width: 100%;
+	letter-spacing: 1.5px;
+	padding: 15px 0;
+}
+
+.login__cta .login__ctaLink:hover {
+	background-color: #0423ee;
+}
+
+.login__ctaDiscription {
+	font-size: 28px;
+	color: mintcream;
+	margin: 0 0 24px;
+	text-align: center;
+	line-height: 1.5em;
+	letter-spacing: 1.1px;
+}
+
+.login__ctaLogoTwo {
+	max-width: 600px;
+	margin-bottom: 20px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.login__BgImage {
+	height: 100%;
+	width: 100%;
+	position: top;
+	size: cover;
+	mask-repeat: no-repeat;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}

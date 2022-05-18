@@ -1,0 +1,214 @@
+.header__nav {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 70px;
+	background-color: #090b13;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 36px;
+	z-index: 3;
+	letter-spacing: 5px;
+}
+
+.header__navLogo {
+	width: 80px;
+	margin-top: 4px;
+	max-height: 70px;
+}
+
+.header__navMenu {
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	margin-right: auto;
+	margin-left: 30px;
+	display: flex;
+	align-items: center;
+	padding: 0 34px;
+}
+
+@media (max-width: 768px) {
+	.header__navMenu {
+		display: none;
+	}
+}
+
+.header__navMenuIcons {
+	height: 30px;
+	min-width: 20px;
+	width: 30px;
+	z-index: auto;
+	margin-left: 15px;
+}
+
+.header__navMenu > span {
+	font-size: 23px;
+	position: relative;
+	padding: 6px;
+}
+
+.header__navMenuHomeIconLine {
+	background-color: rgb(249, 249, 249);
+	border-radius: 0px 0px 4px 4px;
+	bottom: -1px;
+	content: '';
+	height: 2px;
+	left: 85px;
+	opacity: 0;
+	position: absolute;
+	right: 0px;
+	transform-origin: left center;
+	transform: scaleX(0);
+	transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+	visibility: hidden;
+	width: 72px;
+}
+
+.header__navMenuHomeSpan:hover + .header__navMenuHomeIconLine {
+	transform: scaleX(1);
+	visibility: visible;
+	opacity: 1 !important;
+}
+
+.header__navMenuSearchIconLine {
+	background-color: rgb(249, 249, 249);
+	border-radius: 0px 0px 4px 4px;
+	bottom: -1px;
+	content: '';
+	height: 2px;
+	left: 219px;
+	opacity: 0;
+	position: absolute;
+	right: 0px;
+	transform-origin: left center;
+	transform: scaleX(0);
+	transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+	visibility: hidden;
+	width: 87px;
+}
+
+.header__navMenuSearchSpan:hover + .header__navMenuSearchIconLine {
+	transform: scaleX(1);
+	visibility: visible;
+	opacity: 1 !important;
+}
+
+.header__navMenuWatchlistIconLine {
+	background-color: rgb(249, 249, 249);
+	border-radius: 0px 0px 4px 4px;
+	bottom: -1px;
+	content: '';
+	height: 2px;
+	left: 370px;
+	opacity: 0;
+	position: absolute;
+	right: 0px;
+	transform-origin: left center;
+	transform: scaleX(0);
+	transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+	visibility: hidden;
+	width: 125px;
+}
+
+.header__navMenuWatchlistSpan:hover + .header__navMenuWatchlistIconLine {
+	transform: scaleX(1);
+	visibility: visible;
+	opacity: 1 !important;
+}
+
+.header__navMenuOriginalsIconLine {
+	background-color: rgb(249, 249, 249);
+	border-radius: 0px 0px 4px 4px;
+	bottom: -1px;
+	content: '';
+	height: 2px;
+	left: 556px;
+	opacity: 0;
+	position: absolute;
+	right: 0px;
+	transform-origin: left center;
+	transform: scaleX(0);
+	transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+	visibility: hidden;
+	width: 127px;
+}
+
+.header__navMenuOriginalsSpan:hover + .header__navMenuOriginalsIconLine {
+	transform: scaleX(1);
+	visibility: visible;
+	opacity: 1 !important;
+}
+
+.header__navMenuMoviesIconLine {
+	background-color: rgb(249, 249, 249);
+	border-radius: 0px 0px 4px 4px;
+	bottom: -1px;
+	content: '';
+	height: 2px;
+	left: 742px;
+	opacity: 0;
+	position: absolute;
+	right: 0px;
+	transform-origin: left center;
+	transform: scaleX(0);
+	transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+	visibility: hidden;
+	width: 96px;
+}
+
+.header__navMenuMoviesSpan:hover + .header__navMenuMoviesIconLine {
+	transform: scaleX(1);
+	visibility: visible;
+	opacity: 1 !important;
+}
+
+.header__navMenuSeriesIconLine {
+	background-color: rgb(249, 249, 249);
+	border-radius: 0px 0px 4px 4px;
+	bottom: -1px;
+	content: '';
+	height: 2px;
+	left: 900px;
+	opacity: 0;
+	position: absolute;
+	right: 0px;
+	transform-origin: left center;
+	transform: scaleX(0);
+	transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+	visibility: hidden;
+	width: 82px;
+}
+
+.header__navMenuSeriesSpan:hover + .header__navMenuSeriesIconLine {
+	transform: scaleX(1);
+	visibility: visible;
+	opacity: 1 !important;
+}
+
+.header__navLogin {
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 8px 16px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	border: 1px solid #f9f9f9;
+	border-radius: 4px;
+	transition: all 0.2s ease 0s;
+}
+
+.header__navLogin:hover {
+	background-color: #f9f9f9;
+	color: #000;
+	border-color: transparent;
+}
+
+.header__navMenu__userImage {
+	width: 40px;
+	margin-top: 4px;
+	max-height: 50px;
+}
