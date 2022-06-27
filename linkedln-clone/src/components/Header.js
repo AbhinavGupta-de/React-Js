@@ -52,10 +52,13 @@ const Header = (props) => {
 						<User>
 							<a>
 								<img src="/images/user.svg" alt="" />
-								<span>
-									Me <img src="/images/down-icon.svg" alt="" />
-								</span>
+								<span>Me</span>
+								<img src="/images/down-icon.svg" alt="" />
 							</a>
+
+							<SignOut>
+								<a>Sign Out</a>
+							</SignOut>
 						</User>
 						<Work>
 							<a>
@@ -139,7 +142,7 @@ const Nav = styled.nav`
 	margin-left: auto;
 	display: block;
 
-	@media (max-width: 786px) {
+	@media (max-width: 1160px) {
 		position: fixed;
 		left: 0;
 		bottom: 0;
@@ -176,24 +179,26 @@ const Navlist = styled.li`
 		background: transparent;
 		display: flex;
 		flex-direction: column;
-		font-size: 12px;
 		font-weight: 600;
 		justify-content: center;
 		line-height: 1.5;
 		min-height: 40px;
-		min-width: 80px;
+		min-width: 90px;
 		position: relative;
 		text-decoration: none;
+		font-size: 14px;
+
+		@media (max-width: 1160px) {
+			min-width: 0;
+			font-size: 10px;
+			width: 100%;
+		}
 	}
 
 	span {
 		color: rgba(0, 0, 0, 0.6);
 		display: flex;
 		align-items: center;
-	}
-
-	@media (max-width: 768px) {
-		max-width: 70px;
 	}
 
 	&:hover,
@@ -204,6 +209,22 @@ const Navlist = styled.li`
 			}
 		}
 	}
+
+	@media (max-width: 1160px) {
+		width: 100%;
+	}
+`;
+
+const SignOut = styled.div`
+	position: absolute;
+	top: 45px;
+	background: white;
+	border-radius: 0 0 5px 5px;
+	font-size: 16px;
+	height: 40px;
+	text-align: center;
+	display: none;
+	transition-duration: 167ms;
 `;
 
 const User = styled(Navlist)`
@@ -216,6 +237,14 @@ const User = styled(Navlist)`
 	span {
 		display: flex;
 		align-items: center;
+	}
+
+	&:hover {
+		${SignOut} {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+		}
 	}
 `;
 const Work = styled(User)`
