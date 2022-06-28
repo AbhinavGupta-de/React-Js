@@ -193,6 +193,9 @@ const Navlist = styled.li`
 			min-width: 0;
 			font-size: 10px;
 			width: 100%;
+			max-height: 50px;
+			word-wrap: break-word;
+			word-break: break-word;
 		}
 	}
 

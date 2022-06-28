@@ -45,7 +45,7 @@ const Section = styled.section`
 
 	h5 {
 		color: #0a66c2;
-		font-size: 14px;
+		font-size: 16px;
 
 		a {
 			font-weight: 700;
@@ -53,12 +53,12 @@ const Section = styled.section`
 	}
 
 	p {
-		font-size: 14px;
+		font-size: 16px;
 		color: #434649;
 		font-weight: 600;
 	}
 
-	@media (max-width: 1160px) {
+	@media (max-width: 786px) {
 		padding: 0 5px;
 		flex-direction: column;
 	}
@@ -72,10 +72,10 @@ const Layout = styled.div`
 	row-gap: 25px;
 	margin: 25px 0;
 
-	@media (max-width: 1160px) {
+	@media (max-width: 800px) {
 		display: flex;
 		flex-direction: column;
-		padding: 0 5px;
+		padding: 0;
 	}
 `;
 

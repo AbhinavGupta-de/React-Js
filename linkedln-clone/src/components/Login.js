@@ -45,7 +45,7 @@ const Nav = styled.nav`
 	& > a {
 		width: 135px;
 		height: 34px;
-		@media (max-width: 786px) {
+		@media (max-width: 1160px) {
 			padding: 0 5px;
 		}
 	}
@@ -95,9 +95,11 @@ const Section = styled.section`
 	max-width: 1128px;
 	align-items: center;
 	margin: auto;
-	@media (max-width: 768px) {
+	@media (max-width: 1160px) {
 		margin: auto;
 		min-height: 0px;
+		align-items: center;
+		justify-content: center;
 	}
 `;
 
@@ -110,7 +112,7 @@ const Hero = styled.div`
 		color: #2977c9;
 		font-weight: 200px;
 		line-height: 70px;
-		@media (max-width: 786px) {
+		@media (max-width: 1160px) {
 			text-align: center;
 			font-size: 18px;
 			line-height: normal;
@@ -124,7 +126,7 @@ const Hero = styled.div`
 		position: absolute;
 		bottom: -2px;
 		right: -250px;
-		@media (max-width: 786px) {
+		@media (max-width: 1160px) {
 			top: 230px;
 			width: initial;
 			height: initial;
@@ -134,9 +136,9 @@ const Hero = styled.div`
 `;
 
 const Form = styled.div`
-	margin-top: 100px;
+	margin-top: auto;
 	width: 408px;
-	@media (max-width: 786px) {
+	@media (max-width: 1160px) {
 		margin-top: 20px;
 	}
 `;
