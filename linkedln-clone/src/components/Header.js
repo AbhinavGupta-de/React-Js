@@ -187,6 +187,7 @@ const Navlist = styled.li`
 		position: relative;
 		text-decoration: none;
 		font-size: 14px;
+		color: black;
 
 		@media (max-width: 1160px) {
 			min-width: 0;
