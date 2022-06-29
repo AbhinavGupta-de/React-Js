@@ -23,7 +23,30 @@ const Leftside = (props) => {
 						<img src="/images/widget-icon.svg" alt="" />
 					</a>
 				</Widget>
+				<Item>
+					<span>
+						<img src="/images/item-icon.svg" alt="" />
+						My Items
+					</span>
+				</Item>
 			</ArtCard>
+			<CommunityCard>
+				<a>
+					<span>Groups</span>
+				</a>
+				<a>
+					<span>
+						Events
+						<img src="/images/plus-icon.svg" alt="" />
+					</span>
+				</a>
+				<a>
+					<span>Follow Hashtag</span>
+				</a>
+				<a>
+					<span>Discover More</span>
+				</a>
+			</CommunityCard>
 		</Container>
 	);
 };
@@ -79,7 +102,7 @@ const Photo = styled.div`
 const Link = styled.div`
 	font-size: 16px;
 	line-height: 1.5;
-	color: rgba(0, 0, 0, 0.9);
+	color: black;
 	font-weight: 600;
 `;
 
@@ -91,6 +114,89 @@ const AddPhotoText = styled.div`
 	font-weight: 600;
 `;
 
-const Widget = styled.div``;
+const Widget = styled.div`
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-weight: 600;
+
+	& > a {
+		text-decoration: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 4px 12px;
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.08);
+		}
+		div {
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+			span {
+				font-size: 14px;
+				line-height: 1.333;
+				&:first-child {
+					color: rgba(0, 0, 0, 0.7);
+				}
+				&:nth-child(2) {
+					color: rgba(0, 0, 0, 1);
+				}
+			}
+		}
+	}
+`;
+
+const Item = styled.a`
+	border-color: rgba(0, 0, 0, 0.8);
+	text-align: left;
+	padding: 12px;
+	font-size: 14px;
+	display: block;
+	font-weight: 600;
+
+	span {
+		display: flex;
+		align-items: center;
+		color: rgba(0, 0, 0, 1);
+		svg {
+			color: rgba(0, 0, 0, 0.6);
+		}
+	}
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.08);
+	}
+`;
+
+const CommunityCard = styled(ArtCard)`
+	padding: 8px 0 0;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	a {
+		color: black;
+		padding: 4px 12px 4px 12px;
+		font-size: 14px;
+		font-weight: 600;
+		&:hover {
+			color: #0a66c2;
+		}
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		&:last-child {
+			color: rgba(0, 0, 0, 0.7);
+			text-decoration: none;
+			border-top: 1px solid #d6cec2;
+			padding: 12px;
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.08);
+			}
+		}
+	}
+`;
 
 export default Leftside;

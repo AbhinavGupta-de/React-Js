@@ -51,9 +51,11 @@ const Header = (props) => {
 						</Navlist>
 						<User>
 							<a>
+								<img src="/images/up-arrow-list.svg" id="user-upList" alt="" />
+
 								<img src="/images/user.svg" alt="" />
 								<span>Me</span>
-								<img src="/images/down-icon.svg" alt="" />
+								<img src="/images/down-icon.svg" id="user-dropDown" alt="" />
 							</a>
 
 							<SignOut>
@@ -65,7 +67,7 @@ const Header = (props) => {
 								<img src="/images/nav-work.svg" alt="" />
 								<span>
 									My work
-									<img src="/images/down-icon.svg" alt="" />{' '}
+									<img src="/images/down-icon.svg" alt="" />
 								</span>
 							</a>
 						</Work>
@@ -174,12 +176,13 @@ const NavListWrap = styled.ul`
 const Navlist = styled.li`
 	display: flex;
 	align-items: center;
+	justify-content: center;
+
 	a {
 		align-items: center;
 		background: transparent;
 		display: flex;
 		flex-direction: column;
-		font-weight: 600;
 		justify-content: center;
 		line-height: 1.5;
 		min-height: 40px;
@@ -191,7 +194,7 @@ const Navlist = styled.li`
 
 		@media (max-width: 1160px) {
 			min-width: 0;
-			font-size: 10px;
+			font-size: 9px;
 			width: 100%;
 			max-height: 50px;
 			word-wrap: break-word;
@@ -214,8 +217,18 @@ const Navlist = styled.li`
 		}
 	}
 
+	#user-upList {
+		width: 10px;
+		display: none;
+	}
 	@media (max-width: 1160px) {
 		width: 100%;
+		#user-dropDown {
+			display: none;
+		}
+		#user-upList {
+			display: block;
+		}
 	}
 `;
 
@@ -229,6 +242,12 @@ const SignOut = styled.div`
 	text-align: center;
 	display: none;
 	transition-duration: 167ms;
+
+	@media (max-width: 1160px) {
+		font-size: 14px;
+		top: -20px;
+		height: 20px;
+	}
 `;
 
 const User = styled(Navlist)`
