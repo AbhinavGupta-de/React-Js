@@ -12,4 +12,8 @@ const Container = styled.div`
 	grid-area: main;
 `;
 
+const CommonCard = styled.div`
+	text-align: center;
+`;
+
 export default Main;
