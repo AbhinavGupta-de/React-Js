@@ -26,7 +26,7 @@ const Home = (props) => {
 };
 
 const Container = styled.div`
-	padding: 52px;
+	padding: 50px;
 	max-width: 100%;
 
 	@media (max-width: 1160px) {
@@ -35,8 +35,8 @@ const Container = styled.div`
 `;
 
 const Section = styled.section`
-	min-height: 50px;
-	padding: 16px 0;
+	min-height: auto;
+	padding: 10px 0;
 	box-sizing: content-box;
 	text-align: center;
 	text-decoration: underline;

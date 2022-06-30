@@ -28,7 +28,7 @@ const Header = (props) => {
 						<Navlist>
 							<a>
 								<img src="/images/nav-network.svg" alt="" />
-								<span>My Network</span>
+								<span>Network</span>
 							</a>
 						</Navlist>
 						<Navlist>
@@ -46,7 +46,7 @@ const Header = (props) => {
 						<Navlist>
 							<a>
 								<img src="/images/nav-notifications.svg" alt="" />
-								<span>Notifcations</span>
+								<span>Notifcation</span>
 							</a>
 						</Navlist>
 						<User>
@@ -54,8 +54,10 @@ const Header = (props) => {
 								<img src="/images/up-arrow-list.svg" id="user-upList" alt="" />
 
 								<img src="/images/user.svg" alt="" />
-								<span>Me</span>
-								<img src="/images/down-icon.svg" id="user-dropDown" alt="" />
+								<span>
+									Me{' '}
+									<img src="/images/down-icon.svg" id="user-dropDown" alt="" />
+								</span>
 							</a>
 
 							<SignOut>
@@ -66,7 +68,7 @@ const Header = (props) => {
 							<a>
 								<img src="/images/nav-work.svg" alt="" />
 								<span>
-									My work
+									Work
 									<img src="/images/down-icon.svg" alt="" />
 								</span>
 							</a>
@@ -191,14 +193,13 @@ const Navlist = styled.li`
 		text-decoration: none;
 		font-size: 14px;
 		color: black;
+		font-weight: 900;
 
 		@media (max-width: 1160px) {
 			min-width: 0;
-			font-size: 9px;
+			font-size: 10px;
 			width: 100%;
 			max-height: 50px;
-			word-wrap: break-word;
-			word-break: break-word;
 		}
 	}
 
@@ -223,6 +224,7 @@ const Navlist = styled.li`
 	}
 	@media (max-width: 1160px) {
 		width: 100%;
+		font-weight: 700;
 		#user-dropDown {
 			display: none;
 		}
