@@ -70,23 +70,24 @@ const Main = (props) => {
 							<a>2 comments</a>
 						</li>
 					</SocialCount>
-					<button>
-						<img src="/images/like-icon.svg" alt="" />
-						<span>Like</span>
-					</button>
-					<button>
-						<img src="/images/comment-icon.svg" alt="" />
-						<span>Comment</span>
-					</button>
-					<button>
-						<img src="/images/share-icon.svg" alt="" />
-						<span>Share</span>
-					</button>
-					<button>
-						{/* Add the svg code to the file first */}
-						<img src="/images/send-icon.svg" alt="" />
-						<span>Send</span>
-					</button>
+					<SocialAction>
+						<button>
+							<img src="/images/like-icon.svg" alt="" />
+							<span>Like</span>
+						</button>
+						<button>
+							<img src="/images/comment-icon.svg" alt="" />
+							<span>Comment</span>
+						</button>
+						<button>
+							<img src="/images/share-icon.svg" alt="" />
+							<span>Share</span>
+						</button>
+						<button>
+							<img src="/images/send-icon.svg" alt="" />
+							<span>Send</span>
+						</button>
+					</SocialAction>
 				</Article>
 			</div>
 		</Container>
@@ -259,13 +260,11 @@ const SocialCount = styled.ul`
 	overflow: auto;
 	border-bottom: 1px solid #e9e5df;
 	list-style: none;
-	margin: 0 14px;
-	padding: 2px 0;
 	justify-content: space-between;
 
 	li {
 		margin-right: 5px;
-		font-size: 12px;
+		font-size: 10px;
 		button {
 			display: flex;
 			align-items: center;
@@ -273,18 +272,45 @@ const SocialCount = styled.ul`
 			background-color: white;
 
 			img {
-				height: 12px;
-				width: 12px;
+				height: 10px;
+				width: 10px;
 				margin-right: 2px;
 			}
 
 			span {
+				font-size: 10px;
 				color: black;
 				margin-left: 2px;
 			}
 		}
 		a {
 			color: black;
+		}
+	}
+`;
+
+const SocialAction = styled.div`
+	align-items: center;
+	display: flex;
+	/* justify-content: flex-start; */
+	justify-content: space-around;
+	margin: 0;
+	max-height: 40px;
+	padding: 4px 8px;
+	width: 95%;
+	overflow: hidden;
+
+	button {
+		display: inline-flex;
+		align-items: center;
+		color: #0a66c2;
+		font-weight: 700;
+		font-family: cursive;
+		background-color: white;
+		border: none;
+
+		span {
+			margin-left: 4px;
 		}
 	}
 `;
